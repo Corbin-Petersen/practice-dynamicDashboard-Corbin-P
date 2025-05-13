@@ -7,7 +7,7 @@ const TaskList = () => {
     ];
     return (
         <ul>
-            {tasks.map((task) => <li>{ task.completed ? '\u2705' : '\u274C' } {task.taskName}</li>)}
+            {tasks.map((task) => <li>{ task.completed ? '\u2705' : '\u274C' } { task.completed ? <span style={{color: "green"}}>{task.taskName}</span> : task.taskName }</li>)}
         </ul>
     );
 }
